@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 
 // import routes
 // let userRoutes = require("./routes/users.routes");
-let authRoutes = require("./routes/auth.routes");
+let { authRoutes } = require("./routes/auth.routes");
 // let blogRoutes = require("./routes/blogs.routes");
 // const db = require("./models/db");
 
@@ -24,6 +24,9 @@ app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(cookieParser("secret"));
 
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.use("/auth", authRoutes);
 
 app.listen(3000, () => {
