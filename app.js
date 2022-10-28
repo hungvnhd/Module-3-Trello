@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 
 // import routes
 // let userRoutes = require("./routes/users.routes");
-let { authRoutes } = require("./routes/auth.routes");
+let authRoutes = require("./routes/auth.routes");
 // let blogRoutes = require("./routes/blogs.routes");
 // const db = require("./models/db");
 
